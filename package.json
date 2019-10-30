@@ -1,13 +1,13 @@
 {
-  "name": "reverseapk",
+  "name": "apk-editor",
   "version": "1.0.0",
-  "description": "白鹭小游戏打包",
+  "description": "apk-editor",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "tsc -w",
     "ext": "tsc && node dist/index.js",
-    "test": "tsc && mocha dist/test.js"
+    "test": "tsc && node test/test.js"
   },
   "author": "leeyang1990@gmail.com",
   "license": "ISC",
