@@ -1,0 +1,14 @@
+//路劲分割请使用'/'
+{
+    "icons":"C:/Users/pc/Desktop/NewUnityProject/icons",//icon路径
+    "abs" :"C:/Users/pc/Desktop/NewUnityProject/abs",//游戏资源目录
+    "apk":"C:/Users/pc/Desktop/NewUnityProject/demo.apk",//模板包路径
+    "tempout":"C:/Users/pc/Desktop/NewUnityProject/tempout",//拆包路径
+    "outapks":"C:/Users/pc/Desktop/NewUnityProject/outapks",//输出路径
+    "keystore":{
+        "file":"C:/Users/pc/Desktop/NewUnityProject/keystore.jks",
+        "alias":"key0",
+        "storepass":"android",
+        "keypass":"android"
+    }
+}
