@@ -5,10 +5,22 @@ const path = require('path');
 const fs = require('fs-extra');
 const stripJsonComments = require('strip-json-comments');
 //config
-const config = JSON.parse(stripJsonComments(fs.readFileSync(path.join(__dirname,"config.json"),'utf-8'))); 
+var config = JSON.parse(stripJsonComments(fs.readFileSync(path.join(__dirname,"config.json"),'utf-8'))); 
 const games = JSON.parse(stripJsonComments(fs.readFileSync(path.join(__dirname,"games.json"),'utf-8'))); 
 
-
+config = {
+    "icons":__dirname+"/demo/icons",//icon路径
+    "abs" :__dirname+"/demo/abs",//游戏资源目录
+    "apk":__dirname+"/demo/demo.apk",//模板包路径
+    "tempout":__dirname+"/demo/tempout",//拆包路径
+    "outapks":__dirname+"/demo/outapks",//输出路径
+    "keystore":{
+        "file":__dirname+"/demo/keystore.jks",
+        "alias":"key0",
+        "storepass":"android",
+        "keypass":"android"
+    }
+}
 
 function editFiles(arg,tempout,ab,icon) {
     const gamename = arg.gamename;

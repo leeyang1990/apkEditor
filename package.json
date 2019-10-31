@@ -6,9 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "tsc -w",
-    "ext": "tsc && node dist/index.js",
     "test-egret": "tsc && node test/test-egret.js",
-    "test-unity": "tsc && node test/test-unity.js"
+    "test": "tsc && node test/test-unity.js"
   },
   "author": "leeyang1990@gmail.com",
   "license": "ISC",
