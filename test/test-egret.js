@@ -23,7 +23,13 @@ function editFiles(arg,tempout,src) {
     const objStrings = convert.xml2js(xmlStrings, {
         compact: true
     });
-    objStrings.resources.string._text = gamename;
+    console.log(JSON.stringify(objStrings));
+    //根据情况设置app_name,一般为第一个索引
+    if(Array.isArray(objStrings.resources.string)){
+        objStrings.resources.string[0]._text = gamename;
+    }else{
+        objStrings.resources.string._text = gamename;
+    }
     const resultStrings = convert.js2xml(objStrings, {
         compact: true
     });
